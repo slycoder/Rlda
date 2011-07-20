@@ -11,6 +11,7 @@ public:
   }
 
   virtual void update(const int topic, const int word, const int count) {
-    
+    topic_word_counts_(topic, word) += count;
+    topic_word_counts_(topic) += count;
   }
 };
